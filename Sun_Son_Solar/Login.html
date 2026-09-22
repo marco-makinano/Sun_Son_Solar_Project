@@ -8,23 +8,26 @@
 </head>
 <body>
     <h1 class="Head">SUN SON SOLAR</h1>
+    <p class="tagline">Panels, inverters, batteries and full-service solar installation</p>
+
     <div class="form-container">
         <h2>Log-In</h2>
+   
+        <form id="loginForm">
+            <div class="input">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username" required>
+            </div>
 
-        <div class="input">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" placeholder="Enter Your Username" required>
-        </div>
+            <div class="input">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
 
-        <div class="input">
-            <label for="password">Password</label>
-            <input type="text" id="password" name="password"  placeholder="Enter Your Password" required>
-        </div>
-
-            <button type="submit" class="submit-btn">Login</button>
-
+            <button type="submit" class="submit-btn" id="submitBtn">Login</button>
         </form>
-    </div>
 
+        <p class="form-footer">New here? <a href="Index.html">Create an account</a></p>
+    </div>
 </body>
 </html>
