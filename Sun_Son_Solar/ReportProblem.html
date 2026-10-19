@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Problem - Sun Son Solar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">SUN SON SOLAR</div>
+        <div class="role-label">Technician Portal</div>
+        <a href="Checkin.html">Check In</a>
+        <a href="MyJobs.html">My Jobs</a>
+        <a href="Announcements.html">Announcements</a>
+        <a href="ReportProblem.html" class="active">Report a Problem</a>
+        <a href="Index.html" class="logout-btn">Logout</a>
+    </div>
+
+    <div class="main">
+        <h1 class="Head">SUN SON SOLAR</h1>
+        <p class="tagline">Panels, inverters, batteries and full-service solar installation</p>
+
+        <div class="page-wrap">
+            <h2>Report a Problem</h2>
+            <p class="page-sub">Tell the admin team about equipment issues or customer concerns.</p>
+
+            <div class="panel">
+                <div id="reportMessage"></div>
+                <form id="reportForm">
+                    <div class="input">
+                        <label for="job">Job</label>
+                        <select id="job" name="job" required>
+                            <option value="" disabled selected>Choose a job</option>
+                            <option>Installation - Ana Lim</option>
+                            <option>Maintenance - Maria Reyes</option>
+                            <option>Repair - Pedro Cruz</option>
+                        </select>
+                    </div>
+                    <div class="profile-row">
+                        <div class="input">
+                            <label for="problemType">Type of problem</label>
+                            <select id="problemType" name="problemType" required>
+                                <option value="" disabled selected>Choose one</option>
+                                <option>Equipment issue</option>
+                                <option>Customer concern</option>
+                                <option>Safety concern</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="input">
+                            <label for="urgency">How urgent is it?</label>
+                            <select id="urgency" name="urgency" required>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <label for="description">What happened?</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Describe the problem" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Report</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

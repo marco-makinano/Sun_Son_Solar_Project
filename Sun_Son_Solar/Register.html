@@ -13,7 +13,8 @@
     <div class="form-container">
         <h2>Create Your Customer Account</h2>
     
-        <form id="registerForm">
+        <div class="msg" id="registerMessage"></div>
+        <form id="registerForm" data-success="Account created! You can now log in." data-msg="registerMessage">
 
             <div class="input">
                 <label for="firstname">First Name</label>
@@ -82,5 +83,6 @@
         <p class="form-footer">Are you an employee? Your account is created by HR or admin.<br>
             <a href="Index.html">&larr; Back to home</a></p>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

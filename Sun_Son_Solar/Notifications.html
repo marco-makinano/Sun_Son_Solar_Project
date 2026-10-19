@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - Sun Son Solar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">SUN SON SOLAR</div>
+        <div class="role-label">Customer Portal</div>
+        <a href="Schedule.html">Schedule</a>
+        <a href="Book.html">Book a Service</a>
+        <a href="Notifications.html" class="active">Notifications</a>
+        <a href="History.html">History</a>
+        <a href="Support.html">Support</a>
+        <a href="Products.html">Products</a>
+        <a href="Services.html">Services</a>
+        <a href="Profile.html">Profile</a>
+        <a href="Index.html" class="logout-btn">Logout</a>
+    </div>
+
+    <div class="main">
+        <h1 class="Head">SUN SON SOLAR</h1>
+        <p class="tagline">Panels, inverters, batteries and full-service solar installation</p>
+
+        <div class="page-wrap">
+            <h2>Notifications</h2>
+            <p class="page-sub">Reminders, schedule updates and offers from Sun Son Solar.</p>
+
+            <div class="toolbar">
+                <h3><span id="unreadCount">0</span> unread</h3>
+                <button class="btn-sm ghost" onclick="markAllRead()">Mark all as read</button>
+            </div>
+            <div id="notificationList"></div>
+            <p class="hint">Sample notifications are shown for layout.</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Sun Son Solar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">SUN SON SOLAR</div>
+        <div class="role-label">Admin Portal</div>
+        <a href="Admin-Dashboard.html" class="active">Dashboard</a>
+        <a href="Admin-Schedule.html">Schedule</a>
+        <a href="Admin-Quotes.html">Quote Requests</a>
+        <a href="Admin-Users.html">Users</a>
+        <a href="Admin-Attendance.html">Attendance</a>
+        <a href="Admin-Problems.html">Problem Reports</a>
+        <a href="Admin-Reports.html">Reports</a>
+        <a href="Admin-Notifications.html">Notifications</a>
+        <a href="Admin-Settings.html">Settings</a>
+        <a href="Index.html" class="logout-btn">Logout</a>
+    </div>
+
+    <div class="main">
+        <h1 class="Head">SUN SON SOLAR</h1>
+        <p class="tagline">Panels, inverters, batteries and full-service solar installation</p>
+
+        <div class="page-wrap">
+            <h2>Admin Dashboard</h2>
+            <p class="page-sub">What needs your attention today.</p>
+
+            <div class="stat-cards">
+                <div class="stat-card"><strong id="statPending">0</strong><span>Booking requests to review</span></div>
+                <div class="stat-card"><strong id="statQuotes">0</strong><span>New quote requests</span></div>
+                <div class="stat-card"><strong id="statProblems">0</strong><span>Open problem reports</span></div>
+                <div class="stat-card"><strong id="statCheckins">0</strong><span>Technicians checked in today</span></div>
+            </div>
+
+            <div class="panel-row">
+                <div class="panel">
+                    <div class="toolbar"><h3>Waiting for Approval</h3><a href="Admin-Schedule.html" class="btn-sm ghost">Open schedule</a></div>
+                    <div class="table-wrap">
+                        <table class="data">
+                            <thead><tr><th>Customer</th><th>Service</th><th>Date</th></tr></thead>
+                            <tbody id="pendingRows"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="toolbar"><h3>Open Problems</h3><a href="Admin-Problems.html" class="btn-sm ghost">View all</a></div>
+                    <div class="table-wrap">
+                        <table class="data">
+                            <thead><tr><th>From</th><th>Type</th><th>Urgency</th></tr></thead>
+                            <tbody id="problemRows"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <p class="hint">Includes sample data for layout.</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

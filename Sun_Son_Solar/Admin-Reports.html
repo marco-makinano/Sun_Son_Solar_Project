@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports &amp; Analytics - Sun Son Solar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">SUN SON SOLAR</div>
+        <div class="role-label">Admin Portal</div>
+        <a href="Admin-Dashboard.html">Dashboard</a>
+        <a href="Admin-Schedule.html">Schedule</a>
+        <a href="Admin-Quotes.html">Quote Requests</a>
+        <a href="Admin-Users.html">Users</a>
+        <a href="Admin-Attendance.html">Attendance</a>
+        <a href="Admin-Problems.html">Problem Reports</a>
+        <a href="Admin-Reports.html" class="active">Reports</a>
+        <a href="Admin-Notifications.html">Notifications</a>
+        <a href="Admin-Settings.html">Settings</a>
+        <a href="Index.html" class="logout-btn">Logout</a>
+    </div>
+
+    <div class="main">
+        <h1 class="Head">SUN SON SOLAR</h1>
+        <p class="tagline">Panels, inverters, batteries and full-service solar installation</p>
+
+        <div class="page-wrap">
+            <h2>Reports &amp; Analytics</h2>
+            <p class="page-sub">Customer activity, service usage and revenue at a glance.</p>
+
+            <div class="panel no-print">
+                <h3>Generate a Report</h3>
+                <div class="msg" id="reportMsg"></div>
+                <form data-success="Report generated (demo). Use Print to save it as a PDF." data-msg="reportMsg" data-reset="no">
+                    <div class="profile-row">
+                        <div class="input">
+                            <label for="reportType">Report</label>
+                            <select id="reportType">
+                                <option>Customer activity</option>
+                                <option>Service usage</option>
+                                <option>Revenue</option>
+                            </select>
+                        </div>
+                        <div class="input">
+                            <label for="reportPeriod">Period</label>
+                            <select id="reportPeriod">
+                                <option>Last 6 months</option>
+                                <option>This year</option>
+                                <option>This month</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-sm">Generate</button>
+                    <button type="button" class="btn-sm ghost" onclick="window.print()">Print / Save as PDF</button>
+                </form>
+            </div>
+
+            <div class="stat-cards">
+                <div class="stat-card"><strong>&#8369;1,035,000</strong><span>Revenue (last 6 months)</span></div>
+                <div class="stat-card"><strong>143</strong><span>Services completed</span></div>
+                <div class="stat-card"><strong>58</strong><span>New customers</span></div>
+            </div>
+
+            <div class="panel">
+                <h3>Revenue by Month</h3>
+                <div class="bar-chart">
+                    <div class="bar" style="height:50%">&#8369;120k</div>
+                    <div class="bar" style="height:62%">&#8369;150k</div>
+                    <div class="bar" style="height:56%">&#8369;135k</div>
+                    <div class="bar" style="height:88%">&#8369;210k</div>
+                    <div class="bar" style="height:75%">&#8369;180k</div>
+                    <div class="bar" style="height:100%">&#8369;240k</div>
+                </div>
+                <div class="bar-labels"><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div>
+            </div>
+
+            <div class="panel-row">
+                <div class="panel">
+                    <h3>Service Usage</h3>
+                <div class="hbar">
+                    <div class="hbar-top"><span>Consultation</span><span>38</span></div>
+                    <div class="hbar-track"><div class="hbar-fill" style="width:100%"></div></div>
+                </div>
+                <div class="hbar">
+                    <div class="hbar-top"><span>Maintenance</span><span>30</span></div>
+                    <div class="hbar-track"><div class="hbar-fill" style="width:79%"></div></div>
+                </div>
+                <div class="hbar">
+                    <div class="hbar-top"><span>Installation</span><span>22</span></div>
+                    <div class="hbar-track"><div class="hbar-fill" style="width:58%"></div></div>
+                </div>
+                <div class="hbar">
+                    <div class="hbar-top"><span>Designing</span><span>18</span></div>
+                    <div class="hbar-track"><div class="hbar-fill" style="width:47%"></div></div>
+                </div>
+                <div class="hbar">
+                    <div class="hbar-top"><span>Repair</span><span>14</span></div>
+                    <div class="hbar-track"><div class="hbar-fill" style="width:37%"></div></div>
+                </div>
+                <div class="hbar">
+                    <div class="hbar-top"><span>Permitting</span><span>12</span></div>
+                    <div class="hbar-track"><div class="hbar-fill" style="width:32%"></div></div>
+                </div>
+                <div class="hbar">
+                    <div class="hbar-top"><span>Monitoring</span><span>9</span></div>
+                    <div class="hbar-track"><div class="hbar-fill" style="width:24%"></div></div>
+                </div>
+                </div>
+                <div class="panel">
+                    <h3>New Customers by Month</h3>
+                <div class="bar-chart">
+                    <div class="bar" style="height:43%">6</div>
+                    <div class="bar" style="height:64%">9</div>
+                    <div class="bar" style="height:50%">7</div>
+                    <div class="bar" style="height:86%">12</div>
+                    <div class="bar" style="height:71%">10</div>
+                    <div class="bar" style="height:100%">14</div>
+                </div>
+                <div class="bar-labels"><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div>
+                </div>
+            </div>
+            <p class="hint">All numbers on this page are sample data for layout.</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

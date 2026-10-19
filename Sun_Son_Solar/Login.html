@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+    <title>Login - Sun Son Solar</title>
 </head>
 <body>
     <h1 class="Head">SUN SON SOLAR</h1>
@@ -14,6 +14,11 @@
         <h2>Log-In</h2>
    
         <form id="loginForm">
+            <div class="user-type-toggle">
+                <label><input type="radio" name="role" id="role-customer" value="customer" checked><span>Customer</span></label>
+                <label><input type="radio" name="role" id="role-employee" value="employee"><span>Employee</span></label>
+            </div>
+
             <div class="input">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" placeholder="Enter your username" required>
@@ -24,6 +29,14 @@
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
 
+            <div class="input employee-only">
+                <label for="demoRole">Demo only: view as</label>
+                <select id="demoRole" name="demoRole">
+                    <option value="technician">Technician</option>
+                    <option value="admin">Admin / Dispatcher</option>
+                </select>
+            </div>
+            <a href="ForgotPassword.html" class="forgot-link">Forgot password?</a>
             <button type="submit" class="submit-btn" id="submitBtn">Login</button>
         </form>
 
@@ -31,5 +44,6 @@
         <p class="form-footer">Employees: your account is created by HR or admin.<br>
             <a href="Index.html">&larr; Back to home</a></p>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

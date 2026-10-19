@@ -132,6 +132,7 @@ body {
     text-decoration: underline;
 }
 
+/* ---------- Side navigation ---------- */
 .sidebar {
     position: fixed;
     top: 0;
@@ -173,6 +174,7 @@ body {
     font-weight: bold;
 }
 
+/* margin-top: auto pushes Logout to the bottom */
 .sidebar a.logout-btn {
     margin-top: auto;
     background: #007bff;
@@ -181,6 +183,7 @@ body {
     font-weight: bold;
 }
 
+/* Page content sits to the right of the sidebar */
 .main {
     margin-left: 200px;
     padding: 0 20px;
@@ -197,6 +200,7 @@ body {
     }
 }
 
+/* ---------- Page layout ---------- */
 .page-wrap {
     max-width: 1000px;
     margin: 30px auto 60px;
@@ -214,6 +218,7 @@ body {
     margin-bottom: 24px;
 }
 
+/* ---------- Cards (products and services) ---------- */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -253,7 +258,53 @@ body {
     font-weight: bold;
 }
 
+/* ---------- Category filter (CSS only, no JavaScript) ---------- */
+/* The radio buttons are hidden; their labels look like buttons. */
+.catalog > input {
+    display: none;
+}
 
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.filters label {
+    padding: 8px 16px;
+    border: 1px solid #D8D0C0;
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Highlight the chosen category button */
+#cat-all:checked ~ .filters label[for="cat-all"],
+#cat-panels:checked ~ .filters label[for="cat-panels"],
+#cat-inverters:checked ~ .filters label[for="cat-inverters"],
+#cat-batteries:checked ~ .filters label[for="cat-batteries"],
+#cat-racking:checked ~ .filters label[for="cat-racking"],
+#cat-wires:checked ~ .filters label[for="cat-wires"] {
+    background: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Hide the cards that are not in the chosen category */
+#cat-panels:checked ~ .card-grid .card:not(.panels),
+#cat-inverters:checked ~ .card-grid .card:not(.inverters),
+#cat-batteries:checked ~ .card-grid .card:not(.batteries),
+#cat-racking:checked ~ .card-grid .card:not(.racking),
+#cat-wires:checked ~ .card-grid .card:not(.wires) {
+    display: none;
+}
+
+/* ---------- Profile page ---------- */
 .profile-card {
     background: #fff;
     padding: 30px;
@@ -269,6 +320,7 @@ body {
     color: #2B2620;
 }
 
+/* Two fields side by side on wider screens */
 .profile-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -298,3 +350,47 @@ hr.divider {
     border-top: 1px solid #EFE9DC;
     margin: 24px 0;
 }
+
+/* ---------- Form messages (used by profile.js) ---------- */
+.form-message {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.form-message.error {
+    background: #FDEAEA;
+    color: #B3261E;
+}
+
+.form-message.success {
+    background: #E9F6EC;
+    color: #1E7D34;
+}
+
+/* ---------- Employee demo role (shown only when "Employee" is picked) ---------- */
+.employee-only { display: none; }
+form:has(#role-employee:checked) .employee-only { display: block; }
+
+.forgot-link {
+    display: block;
+    text-align: right;
+    margin: -6px 0 14px;
+    font-size: 13px;
+    color: #007bff;
+    text-decoration: none;
+}
+.forgot-link:hover { text-decoration: underline; }
+
+/* Functional prototype additions */
+.form-message{padding:10px 12px;margin:10px 0;border-radius:6px;font-size:.95rem}
+.form-message.success{background:#e8f7ed;color:#14532d;border:1px solid #b7e4c7}
+.form-message.error{background:#fff0f0;color:#8b1e1e;border:1px solid #f1c1c1}
+.empty-state{text-align:center;color:#64748b;padding:22px!important}
+.action-group{display:flex;gap:6px;flex-wrap:wrap}
+.action-group .btn-sm{cursor:pointer}
+.calendar-item{padding:10px 12px;margin:8px 0;border:1px solid #e2e8f0;border-radius:8px;background:#fff}
+[hidden]{display:none!important}
+@media(max-width:720px){.action-group{min-width:120px}.data{font-size:.85rem}.table-wrap{overflow-x:auto}}

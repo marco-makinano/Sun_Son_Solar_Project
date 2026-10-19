@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - Sun Son Solar</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <div class="sidebar">
         <div class="brand">SUN SON SOLAR</div>
+        <div class="role-label">Customer Portal</div>
+        <a href="Schedule.html">Schedule</a>
+        <a href="Book.html">Book a Service</a>
+        <a href="Notifications.html">Notifications</a>
+        <a href="History.html">History</a>
+        <a href="Support.html">Support</a>
         <a href="Products.html" class="active">Products</a>
         <a href="Services.html">Services</a>
         <a href="Profile.html">Profile</a>
-        <a href="Login.html" class="logout-btn">Logout</a>
+        <a href="Index.html" class="logout-btn">Logout</a>
     </div>
 
     <div class="main">
@@ -23,7 +30,23 @@
             <h2>Our Products</h2>
             <p class="page-sub">Everything you need for your solar setup.</p>
 
+            <div class="catalog">
+                <!-- Hidden radio buttons: the labels below are the visible buttons -->
+                <input type="radio" name="cat" id="cat-all" checked>
+                <input type="radio" name="cat" id="cat-panels">
+                <input type="radio" name="cat" id="cat-inverters">
+                <input type="radio" name="cat" id="cat-batteries">
+                <input type="radio" name="cat" id="cat-racking">
+                <input type="radio" name="cat" id="cat-wires">
 
+                <div class="filters">
+                    <label for="cat-all">All</label>
+                    <label for="cat-panels">Solar Panels</label>
+                    <label for="cat-inverters">Inverters</label>
+                    <label for="cat-batteries">Batteries</label>
+                    <label for="cat-racking">Racking &amp; Mounting</label>
+                    <label for="cat-wires">Wires</label>
+                </div>
 
                 <!-- Sample products: replace names and descriptions with the real ones -->
                 <div class="card-grid">
@@ -41,9 +64,66 @@
                     <p>Cost-effective panel for larger installations.</p>
                     <div class="price">Price on request</div>
                 </div>
+                <div class="card inverters">
+                    <div class="icon">🔌</div>
+                    <div class="tag">Inverters</div>
+                    <h3>Grid-Tie Inverter</h3>
+                    <p>Converts solar power for use with the utility grid.</p>
+                    <div class="price">Price on request</div>
+                </div>
+                <div class="card inverters">
+                    <div class="icon">🔌</div>
+                    <div class="tag">Inverters</div>
+                    <h3>Hybrid Inverter</h3>
+                    <p>Works with panels, batteries and the grid in one unit.</p>
+                    <div class="price">Price on request</div>
+                </div>
+                <div class="card batteries">
+                    <div class="icon">🔋</div>
+                    <div class="tag">Batteries</div>
+                    <h3>Lithium Battery Pack</h3>
+                    <p>Stores solar energy for night time and outages.</p>
+                    <div class="price">Price on request</div>
+                </div>
+                <div class="card batteries">
+                    <div class="icon">🔋</div>
+                    <div class="tag">Batteries</div>
+                    <h3>Deep-Cycle Battery</h3>
+                    <p>Reliable storage for off-grid and backup systems.</p>
+                    <div class="price">Price on request</div>
+                </div>
+                <div class="card racking">
+                    <div class="icon">🔩</div>
+                    <div class="tag">Racking &amp; Mounting</div>
+                    <h3>Roof Mounting Rail Kit</h3>
+                    <p>Aluminum rails and clamps for securing panels.</p>
+                    <div class="price">Price on request</div>
+                </div>
+                <div class="card racking">
+                    <div class="icon">🔩</div>
+                    <div class="tag">Racking &amp; Mounting</div>
+                    <h3>Ground Mount Frame</h3>
+                    <p>Sturdy frame for panels installed on open ground.</p>
+                    <div class="price">Price on request</div>
+                </div>
+                <div class="card wires">
+                    <div class="icon">〰️</div>
+                    <div class="tag">Wires</div>
+                    <h3>Solar PV Cable</h3>
+                    <p>UV-resistant cable for outdoor solar wiring.</p>
+                    <div class="price">Price on request</div>
+                </div>
+                <div class="card wires">
+                    <div class="icon">〰️</div>
+                    <div class="tag">Wires</div>
+                    <h3>MC4 Connector Set</h3>
+                    <p>Weatherproof connectors for joining panel cables.</p>
+                    <div class="price">Price on request</div>
+                </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
