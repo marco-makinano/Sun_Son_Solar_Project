@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Schedule - Sun Son Solar</title>
+    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/dashboard.css') ?>">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">SUN SON SOLAR</div>
+        <div class="role-label">Customer Portal</div>
+        <a href="<?= base_url('customer/schedule') ?>" class="active">Schedule</a>
+        <a href="<?= base_url('customer/book') ?>">Book a Service</a>
+        <a href="<?= base_url('customer/notifications') ?>">Notifications</a>
+        <a href="<?= base_url('customer/history') ?>">History</a>
+        <a href="<?= base_url('customer/support') ?>">Support</a>
+        <a href="<?= base_url('products') ?>">Products</a>
+        <a href="<?= base_url('services') ?>">Services</a>
+        <a href="<?= base_url('profile') ?>">Profile</a>
+        <a href="<?= base_url('logout') ?>" class="logout-btn">Logout</a>
+    </div>
+
+    <div class="main">
+        <h1 class="Head">SUN SON SOLAR</h1>
+        <p class="tagline">Panels, inverters, batteries and full-service solar installation</p>
+
+        <div class="page-wrap">
+            <h2>My Schedule</h2>
+            <p class="page-sub">View and manage your consultation, installation and maintenance services.</p>
+
+            <div class="stat-cards">
+                <div class="stat-card"><strong id="statUpcoming">0</strong><span>Confirmed services</span></div>
+                <div class="stat-card"><strong id="statPending">0</strong><span>Waiting for approval</span></div>
+                <div class="stat-card"><strong id="statNext">-</strong><span>Next service</span></div>
+            </div>
+
+            <div class="panel">
+                <div class="toolbar">
+                    <h3>My Scheduled Services</h3>
+                    <a href="<?= base_url('customer/book') ?>" class="btn-sm">+ Book a Service</a>
+                </div>
+                <div class="table-wrap">
+                    <table class="data">
+                        <thead>
+                            <tr><th>Service</th><th>Date</th><th>Time</th><th>Address</th><th>Status</th><th>Actions</th></tr>
+                        </thead>
+                        <tbody id="bookingRows"></tbody>
+                    </table>
+                </div>
+                <p class="hint">Sample bookings are shown for layout. Services you book appear here too.</p>
+            </div>
+
+            <div class="panel hidden" id="reschedulePanel">
+                <h3>Reschedule: <span id="rescheduleName"></span></h3>
+                <div class="profile-row">
+                    <div class="input">
+                        <label for="newDate">New date</label>
+                        <input type="date" id="newDate">
+                    </div>
+                    <div class="input">
+                        <label for="newTime">New time</label>
+                        <select id="newTime">
+                            <option>8:00 AM</option>
+                            <option>9:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>1:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>4:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn-sm" onclick="saveReschedule()">Save new schedule</button>
+                <button class="btn-sm ghost" onclick="closeReschedule()">Close</button>
+                <p class="hint">Changes need our team's approval, so the status goes back to Pending.</p>
+            </div>
+        </div>
+    </div>
+    <script src="<?= base_url('js/app.js') ?>"></script>
+</body>
+</html>
