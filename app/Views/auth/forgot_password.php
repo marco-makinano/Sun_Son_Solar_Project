@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
+    <title>Forgot Password - Sun Son Solar</title>
+</head>
+<body>
+    <h1 class="Head">SUN SON SOLAR</h1>
+    <p class="tagline">Panels, inverters, batteries and full-service solar installation</p>
+
+    <div class="form-container">
+        <h2>Forgot Your Password?</h2>
+        <p class="form-footer" style="margin-top:-8px; margin-bottom:20px">Enter the email on your account and we will send you a link to reset it.</p>
+
+        <div class="msg" id="forgotMessage"></div>
+        <form data-success="If an account exists for that email, a reset link is on its way." data-msg="forgotMessage">
+            <div class="input">
+                <label for="resetEmail">Email</label>
+                <input type="email" id="resetEmail" placeholder="Enter your email" required>
+            </div>
+            <button type="submit" class="submit-btn">Send Reset Link</button>
+        </form>
+
+        <p class="form-footer"><a href="<?= base_url('login') ?>">&larr; Back to log in</a></p>
+    </div>
+    <script src="<?= base_url('js/app.js') ?>"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check In - Sun Son Solar</title>
+    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/dashboard.css') ?>">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="brand">SUN SON SOLAR</div>
+        <div class="role-label">Technician Portal</div>
+        <a href="<?= base_url('technician/checkin') ?>" class="active">Check In</a>
+        <a href="<?= base_url('technician/jobs') ?>">My Jobs</a>
+        <a href="<?= base_url('technician/announcements') ?>">Announcements</a>
+        <a href="<?= base_url('technician/report-problem') ?>">Report a Problem</a>
+        <a href="<?= base_url('logout') ?>" class="logout-btn">Logout</a>
+    </div>
+
+    <div class="main">
+        <h1 class="Head">SUN SON SOLAR</h1>
+        <p class="tagline">Panels, inverters, batteries and full-service solar installation</p>
+
+        <div class="page-wrap">
+            <h2>Check In</h2>
+            <p class="page-sub">Arrived at the job site? Tap the button once.</p>
+
+            <div class="panel">
+                <div class="checkin-box">
+                    <button class="checkin-btn" id="checkinBtn">CHECK IN</button>
+                    <div class="checkin-info" id="checkinResult"></div>
+                    <p class="hint">Your name, the time and your location are recorded. Please allow location access when asked.</p>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h3>My Recent Check-ins</h3>
+                <div class="table-wrap">
+                    <table class="data">
+                        <thead><tr><th>Date</th><th>Time</th><th>Coordinates</th></tr></thead>
+                        <tbody id="recentCheckins"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="<?= base_url('js/app.js') ?>"></script>
+</body>
+</html>
